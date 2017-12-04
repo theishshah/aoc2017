@@ -16,9 +16,22 @@ def is_valid(line):
     
     return True
 
+def check_two(line):
+    words = line.split()
+    sorty = set()
+    
+    for w in words:
+        sorty.add(str(sorted(w)))
+    return len(sorty) == len(words)
+
 for l in lines:
     flag = is_valid(l)
     if flag:
         check1_valid.append(l)
+
+for l in check1_valid:
+    flag = check_two(l)
+    if flag:
+        valid += 1
 
 print valid
