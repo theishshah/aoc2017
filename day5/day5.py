@@ -9,10 +9,10 @@ while index in range(len(data)):
     jump = data[temp_index]
     index += data[temp_index]
     
-    #if abs(jump) >= 3:
-     #   data[temp_index] -= 1
-    #else:    
-    data[temp_index] += 1
+    if jump >= 3:
+        data[temp_index] -= 1
+    else:    
+        data[temp_index] += 1
 
     #count
     steps += 1
